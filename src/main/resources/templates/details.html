@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera página en HTML</title>
+    <title th:text=${tittle}>La primera pagina </title>
 </head>
-<body>
-    <h1> Hola mundo Jose Julian Hernandez Gonzales ;y ahora si me salió xd</h1>
+<ul>
+    <h1 th:text=${title}></h1>
+    <ul>
+    <li th:text=${name}></li>
+    <li th:text=${lastname}></li>
+    </ul>
 </body>
 </html>

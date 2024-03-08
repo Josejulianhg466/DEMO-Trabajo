@@ -1,13 +1,16 @@
 package com.appwithspring.demo.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class UserController {
     @GetMapping("details")
-    public String detail(){
-        return"details" ;
+    public String details(Model model){
+        model.addAttribute("title","Hola mundo");
+        model.addAttribute("name","Jose Julian el papucho ;y xd");
+        model.addAttribute("lastname", "Hernandez");
+        return "details"; // Assuming there's a template named "details.html" to render
     }
-
 }
